@@ -8,7 +8,7 @@ public class AccumulateTests
         Assert.Equal(expected, input.Accumulate((x) => x * x));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Accumulate_squares()
     {
         int[] input = [1, 2, 3];
@@ -16,7 +16,7 @@ public class AccumulateTests
         Assert.Equal(expected, input.Accumulate((x) => x * x));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Accumulate_upcases()
     {
         string[] input = ["Hello", "world"];
@@ -24,7 +24,7 @@ public class AccumulateTests
         Assert.Equal(expected, input.Accumulate((x) => x.ToUpper()));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Accumulate_reversed_strings()
     {
         string[] input = ["the", "quick", "brown", "fox", "etc"];
@@ -32,7 +32,7 @@ public class AccumulateTests
         Assert.Equal(expected, input.Accumulate((x) => new string(x.Reverse().ToArray())));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Accumulate_recursively()
     {
         string[] input = ["a", "b", "c"];
@@ -40,7 +40,7 @@ public class AccumulateTests
         Assert.Equal(expected, input.Accumulate((x) => new[] { "1", "2", "3" }.Accumulate((y) => x + y)));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Accumulate_is_lazy()
     {
         var counter = 0;
